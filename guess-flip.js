@@ -5,8 +5,15 @@ import minimist from 'minimist'
 const args = minimist(process.argv.slice(2))
 // Define a const `number` using the argument from the command line. 
 args['call']
-const call = args.call || process.env.CALL || "heads"
-
-// Import the coinFlip function from your coin.mjs file
+const call = args.call || process.env.CALL
 import { coinFlips, countFlips, flipACoin } from './modules/coin.mjs'
-console.log(flipACoin(call))
+if (call == ''){
+	console.error("Error: no input\nUsage: node guess-flip --call=[heads|tails]")
+}
+else if(call != 'heads' && call != 'tails'){
+	console.error("Error: invalid input\nUsage: node guess-flip --call=[heads|tails]")
+}
+else{
+// Import the coinFlip function from your coin.mjs file
+	console.log(flipACoin(call))
+}
