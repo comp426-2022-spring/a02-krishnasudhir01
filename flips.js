@@ -12,7 +12,5 @@ import { coinFlips, countFlips } from './modules/coin.mjs'
 // Call the coinFlip function and put the return into STDOUT
 var flipArray = coinFlips(number)
 console.log(flipArray)
-console.log("\n")
 var flipCounts = countFlips(flipArray)
 console.log(flipCounts)
-console.log("\n")
