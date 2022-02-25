@@ -8,10 +8,10 @@ args['call']
 const call = args.call || process.env.CALL
 import { coinFlips, countFlips, flipACoin } from './modules/coin.mjs'
 if (call == ''){
-	console.error("Error: no input\nUsage: node guess-flip --call=[heads|tails]")
+	console.error("Error: no input")
 }
 else if(call != 'heads' && call != 'tails'){
-	console.error("Error: invalid input\nUsage: node guess-flip --call=[heads|tails]")
+	console.error("Usage: node guess-flip.js --call=heads|tails")
 }
 else{
 // Import the coinFlip function from your coin.mjs file
