@@ -12,7 +12,7 @@ if (!call || call.length == 0) {
 	console.error("Error: no input")
 }
 else if(call != 'heads' && call != 'tails') {
-	console.error("Usage: node guess-flip.js --call=heads|tails")
+	console.error("Usage: node guess-flip.js --call=[heads|tails]")
 }
 else {
 // Import the coinFlip function from your coin.mjs file
