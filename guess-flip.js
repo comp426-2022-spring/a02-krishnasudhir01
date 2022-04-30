@@ -8,10 +8,9 @@ const args = require("minimist")(process.argv.slice(2));
 const args = minimist(process.argv.slice(2));
 
 // Define a const `number` using the argument from the command line. 
-//args['call']
+args['call']
 const call = args.call; // || process.env.CALL;
 import { coinFlips, countFlips, flipACoin } from './modules/coin.mjs';
-args['call']
 
 
 
